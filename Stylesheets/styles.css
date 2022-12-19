@@ -2,13 +2,9 @@
     display: inline;
 }
 
-.body {
-  background-color: rgb(30,30,40);
-}
-
 .titletext {
     text-align: center;
-    color: #CC6666;
+    color: white;
 }
 
 .center {
