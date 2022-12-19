@@ -1,5 +1,5 @@
 .nav {
-    display: inline;
+    display: inline-block;
 }
 
 .titletext {
@@ -62,11 +62,7 @@
     color:inherit;
     opacity:0.75;
   }
-  
-  .footer-basic .social > a:hover {
-    opacity:0.9;
-  }
-  
+
   .footer-basic .copyright {
     margin-top:15px;
     text-align:center;
