@@ -15,6 +15,14 @@
     height: 500px;
 }
 
+.container-about {
+    border-style: groove;
+    border-radius: 8px;
+    border-color: #aaa;
+    width: 250px;
+    height: 250px;
+}
+
 
 .footer-basic {
     padding:40px 0;
