@@ -1,5 +1,9 @@
-.nav {
+.navbar {
     display: inline;
+}
+
+.titletext {
+    text-align: center;
 }
 
 .center {
