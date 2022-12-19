@@ -28,20 +28,6 @@
     text-align: center;
 }
 
-.video {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.content {
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-}
-
 #myBtn {
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) 0 6px 20px 0 rgba(0, 0, 0, 0.19);
