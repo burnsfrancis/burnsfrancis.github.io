@@ -12,6 +12,22 @@
 
   <title>EL TIO: Polish Cow</title>
 
+  <script>
+    var vid = document.getElementById("myVideo");
+
+    var btn = document.getElementById("myBtn");
+
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+  </script>
+
 </head>
 
 <body>
@@ -36,24 +52,6 @@
     </video>
 
     <button id="myBtn" onclick="myFunction()" type="button">Play</button>
-
-  <script>
-    var vid = document.getElementById("myVideo");
-
-    var btn = document.getElementById("myBtn");
-
-    function myFunction() {
-        if (video.paused) {
-            video.play();
-            btn.innerHTML = "Pause";
-        } else {
-            video.pause();
-            btn.innerHTML = "Play";
-        }
-    }
-  </script>
-
-
 
   <div class="footer-basic">
     <footer>
