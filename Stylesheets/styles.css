@@ -21,6 +21,9 @@
     border-color: #aaa;
     width: 250px;
     height: 250px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
 }
 
 
