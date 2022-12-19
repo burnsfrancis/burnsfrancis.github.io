@@ -2,6 +2,15 @@
     display: inline;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    width: 500px;
+    height: 500px;
+}
+
 
 .footer-basic {
     padding:40px 0;
