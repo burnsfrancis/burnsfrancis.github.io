@@ -1,6 +1,5 @@
 .nav {
-    display: inline;
-    float: left;
+    display: inline-block;
 }
 
 .titletext {
