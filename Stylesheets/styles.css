@@ -16,6 +16,15 @@
     height: 500px;
 }
 
+.ratson {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  width: 1280px;
+  height: 720px;
+}
+
 .container-about {
   float: left;
   width: 35%;
