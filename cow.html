@@ -12,22 +12,6 @@
 
   <title>EL TIO: Polish Cow</title>
 
-  <script>
-    var vid = document.getElementById("myVideo");
-
-    var btn = document.getElementById("myBtn");
-
-    function myFunction() {
-        if (video.paused) {
-            video.play();
-            btn.innerHTML = "Pause";
-        } else {
-            video.pause();
-            btn.innerHTML = "Play";
-        }
-    }
-  </script>
-
 </head>
 
 <body>
@@ -47,7 +31,7 @@
     </div>
   </nav>
 
-    <video autoplay muted loop id="myVideo" class="center">
+    <video loop id="myVideo" class="center">
     <source src="/Photos/polishcow.mp4" type="video/mp4">
     </video>
 
@@ -63,6 +47,22 @@
       <p class="copyright">Francis Burns | 2022</p>
     </footer>
   </div>
+
+  <script>
+    var video = document.getElementById("myVideo");
+
+    var btn = document.getElementById("myBtn");
+
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
