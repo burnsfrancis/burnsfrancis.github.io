@@ -43,6 +43,9 @@
   padding: 20px;
 }
 
+.row {
+  width: 90%;
+}
 .row:after {
   content:"";
   display:table;
