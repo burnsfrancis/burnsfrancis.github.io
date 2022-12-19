@@ -27,7 +27,10 @@
     padding: 5px;
     text-align: center;
 }
- 
+
+.video {
+  text-align: center;
+}
 .content {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
