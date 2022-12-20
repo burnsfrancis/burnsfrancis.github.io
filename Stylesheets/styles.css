@@ -35,13 +35,13 @@
 
 .column {
   float: left;
-  width: 50%;
+  width: 30%;
+  padding: 10%;
   height: 500px;
   text-align: center;
   border-style: groove;
   border-radius: 8px;
   border-color: black;
-  padding: 20px;
   vertical-align: middle;
 }
 
