@@ -33,6 +33,10 @@
   height: 720px;
 }
 
+.col {
+    text-align: center;
+}
+
 #myBtn {
   display: block;
   border-radius: 8px;
