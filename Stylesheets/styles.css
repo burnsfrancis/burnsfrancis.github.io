@@ -33,24 +33,6 @@
   height: 720px;
 }
 
-.column {
-  float: left;
-  width: 30%;
-  padding: 10%;
-  height: 500px;
-  text-align: center;
-  border-style: groove;
-  border-radius: 8px;
-  border-color: black;
-  vertical-align: middle;
-}
-
-.row:after {
-  content:"";
-  display:table;
-  clear:both;
-}
-
 #myBtn {
   display: block;
   border-radius: 8px;
