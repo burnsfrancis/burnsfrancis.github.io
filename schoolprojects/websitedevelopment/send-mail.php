@@ -1,4 +1,11 @@
 <?php
+
+// Form script that collects data and sends an email, incase I decide to start hosting on private server.
+// 
+// Aware it's not very secure I am.
+//
+// Currently not used by anything.
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect the form data
     $name = htmlspecialchars($_POST['name']);
@@ -6,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comment = htmlspecialchars($_POST['text']);
 
     // Config
-    $to = "burnsfrancis@icloud.com"; // Change this to your email address
+    $to = "temp@mail.com";
     $subject = "Mail from El Tio project";
     $message = "Name: $name\nEmail: $email\n\nComment:\n$comment";
     $headers = "From: $email";
