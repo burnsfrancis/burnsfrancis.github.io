@@ -2,10 +2,9 @@
 // authenticate.php
 session_start();
 
-// In a real application, you would validate against a database
-// This is just a simple example
+
 $valid_username = "admin";
-$valid_password = "securepassword123"; // In production, use password_hash and password_verify
+$valid_password = "admin"; // i know, will add hashing later
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -16,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["loggedin"] = true;
         $_SESSION["username"] = $username;
         
-        // Redirect to dashboard
-        header("Location: /admin/dashboard.php");
+        // Redirect
+        header("Location: /admin/dashboard.php"); // does not excist yet, soon...
         exit;
     } else {
         // Invalid login
