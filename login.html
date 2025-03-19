@@ -83,7 +83,7 @@
                 }
 
                 // Redirect
-                window.location.href = "dashboard.html";
+                window.location.href = "/dashboard";
             } else {
                 // Failed login
                 document.getElementById("loginError").style.display = "block";
@@ -95,7 +95,7 @@
         // Check if user is already logged in when page loads
         window.onload = function() {
           if (localStorage.getItem("loggedIn") === "true" || sessionStorage.getItem("loggedIn") === "true") {
-            window.location.href = "dashboard.html";
+            window.location.href = "/dashboard";
           }
         }; */
     </script>
@@ -107,7 +107,7 @@
     <nav class="container-fluid">
         <ul>
             <li>
-                <a href="index.html" class="contrast"><strong>Francis Burns</strong></a>
+                <a href="/" class="contrast"><strong>Francis Burns</strong></a>
             </li>
         </ul>
     </nav>
@@ -145,7 +145,7 @@
     <!-- Footer -->
     <footer class="container-fluid">
         <small>
-            <a href="index.html" class="secondary">← Go back</a>
+            <a href="/" class="secondary">← Go back</a>
         </small>
     </footer>
 
