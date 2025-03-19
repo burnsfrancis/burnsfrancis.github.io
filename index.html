@@ -1,64 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Maintenance</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .maintenance-container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-        }
-        .maintenance-icon {
-            font-size: 80px;
-            color: #ffc107;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-        p {
-            color: #666;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-        .button-link {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .button-link:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Francis Burns</title>
+    <meta name="description" content="Home page">
+
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="Stylesheets/pico/css/pico.pumpkin.min.css">
 </head>
+
 <body>
-    <div class="maintenance-container">
-        <h1>Website Under Maintenance</h1>
-        <p>I am currently updating my website to provide you with a better experience. In the meantime, you can visit my old website I did for a school project, or connect with me on LinkedIn!</p>
-        <a href="https://burnsfrancis.github.io/schoolprojects/websitedevelopment/index.html" class="button-link" target="_blank">View Old Website</a>
-        <a href="http://linkedin.com/in/francisburns" class ="button-link" target="_blank">LinkedIn</a>
-    </div>
+    <!--Navigation bar-->
+    <nav class="container">
+        <ul>
+            <li><strong>FRANCIS BURNS</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#walkthroughs">Walkthroughs</a></li>
+            <li><a href="#school">School work</a></li>
+            <li><a href="#other">Stuff</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero section -->
+    <header class="container">
+        <hgroup>
+            <h1>Francis Burns</h1>
+            <h2>Student</h2>
+        </hgroup>
+        <p>This website is still under work.</p>
+    </header>
+
+    <main class="container">
+        <!-- About section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="grid">
+                <div>
+                    <p>I am a business administration student specializing in business information technology and
+                        cybersecurity. My studies have given me a strong foundation in both the technical and strategic
+                        sides of business, allowing me to understand how technology supports and drives modern
+                        organizations.</p>
+                    <p>Yay I got hired!</p>
+                </div>
+                <!-- no profile picture for now
+                <div>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Projects section
+         
+            Gotta build backend first -->
+
+        <!-- Walkthrough section 
+         
+            Same here gotta build backend first -->
+
+        <!-- Academic Work section -->
+        <!-- Other section -->
+
+        <!-- Footer -->
+        <footer class="container">
+            <small>
+                &copy; <span id="year"></span> Francis Burns.
+                <script>
+                    document.getElementById('year').textContent = new Date().getFullYear();
+                </script>
+            </small>
+            <ul>
+                <li><a href="https://github.com/burnsfrancis" class="contrast">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/francisburns" class="contrast">LinkedIn</a></li>
+                <li><a href="mailto:burnsfrancis@icloud.com" class="contrast">Email</a></li>
+            </ul>
+        </footer>
 </body>
+
 </html>

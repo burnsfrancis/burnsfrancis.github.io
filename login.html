@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <meta name="description" content="Admin Dashboard - Login Page">
+
+    <link rel="stylesheet" href="Stylesheets/pico/css/pico.pumpkin.min.css">
+
+    <style>
+        main {
+            padding-bottom: 60px;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .article {
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            width: 100%;
+        }
+    </style>
+
+
+    <!--Login script-->
+
+    <script>
+        // Username hashing
+        async function hashUsername(username) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(username);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+        }
+
+        // Password hashing
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+        }
+
+
+        // Function to handle login authentication
+        async function authenticate(event) {
+            event.preventDefault();
+
+            const validUsernameHash =
+            "db57e4526292763e1a7f1e3a6ca13897230cb72e8443ee7382beed322d888bf3"; // I get it, this isn't secure. It will work for now.
+            const validPasswordHash =
+            "b1fe1f27dda2a26ba4ce1ead2972ac1faff8e7f80ecf20a206963339706aa3e4"; // I will fix one day.
+            // Get input values
+            const username = document.getElementById("login").value;
+            const password = document.getElementById("password").value;
+            const rememberMe = document.getElementById("remember").checked;
+
+            // Hash inputs
+            const inputUsernameHash = await hashUsername(username)
+            const inputPasswordHash = await hashPassword(password);
+
+            // Check credentials
+            if (inputUsernameHash === validUsernameHash && inputPasswordHash === validPasswordHash) {
+                // Success - store login state
+                if (rememberMe) {
+                    localStorage.setItem("loggedIn", "true");
+                } else {
+                    sessionStorage.setItem("loggedIn", "true");
+                }
+
+                // Redirect
+                window.location.href = "dashboard.html";
+            } else {
+                // Failed login
+                document.getElementById("loginError").style.display = "block";
+            }
+        }
+
+        /* Commented out during testing.
+
+        // Check if user is already logged in when page loads
+        window.onload = function() {
+          if (localStorage.getItem("loggedIn") === "true" || sessionStorage.getItem("loggedIn") === "true") {
+            window.location.href = "dashboard.html";
+          }
+        }; */
+    </script>
+
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="container-fluid">
+        <ul>
+            <li>
+                <a href="index.html" class="contrast"><strong>Francis Burns</strong></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main class="container">
+        <article class="article">
+            <div class="form-container">
+                <hgroup>
+                    <h1>Sign in</h1>
+                </hgroup>
+                <form id="loginForm">
+                    <!-- Error -->
+                    <p id="loginError"
+                        style="display: none; color: red; background-color: var(--del-background); padding: 0.5rem; border-radius: 0.25rem;">
+                        Try again.
+                    </p>
+
+                    <input type="text" name="login" id="login" placeholder="Login" aria-label="Login"
+                        autocomplete="username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" aria-label="Password"
+                        autocomplete="current-password" required>
+                    <fieldset>
+                        <label for="remember">
+                            <input type="checkbox" role="switch" id="remember" name="remember">
+                            Remember me
+                        </label>
+                    </fieldset>
+                    <button type="submit" class="contrast" onclick="authenticate(event)">Login</button>
+                </form>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid">
+        <small>
+            <a href="index.html" class="secondary">← Go back</a>
+        </small>
+    </footer>
+
+</body>
+
+</html>

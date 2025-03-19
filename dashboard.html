@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <meta name="description" content="Admin dashboard">
+
+    <link rel="stylesheet" href="Stylesheets/pico/css/pico.pumpkin.min.css">
+
+    <!-- Authentication protection script -->
+
+    <script>
+        // Check login state when page loads
+        window.onload = function () {
+            // Check if user is logged in
+            if (localStorage.getItem("loggedIn") !== "true" && sessionStorage.getItem("loggedIn") !== "true") {
+                // Not logged in, redirect to login page
+                window.location.href = "login.html";
+            }
+        };
+
+        // Logout function
+        function logout() {
+            // Clear both storage options
+            localStorage.removeItem("loggedIn");
+            sessionStorage.removeItem("loggedIn");
+
+            // Redirect to login page
+            window.location.href = "login.html";
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="container-fluid">
+        <ul>
+            <li>
+                <a href="index.html" class="contrast"><strong>Francis Burns</strong></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <button class="outline" onclick="logout()">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main class="container">
+        <article>
+            <header>
+                <h2>Dashboard</h2>
+                <p>hi</p>
+            </header>
+        </article>
+    </main>
+</body>
+
+</html>
